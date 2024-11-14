@@ -3,7 +3,8 @@ import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import { Suspense } from "react";
-import IPhone from "./IPhone";
+import Phone from "./Phone";
+
 import Lights from "./Lights";
 import Loader from "./Loader";
 
@@ -49,7 +50,7 @@ const ModelView = ({
       {/* Model Group */}
       <group ref={groupRef} position={[0, 0, 0]} scale={[1, 1, 1]}>
         <Suspense fallback={<Loader />}>
-          <IPhone
+          <Phone
             item={item}
             size={size}
             scale={size === "large" ? [17, 17, 17] : [15, 15, 15]}
